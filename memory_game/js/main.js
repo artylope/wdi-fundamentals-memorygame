@@ -35,19 +35,20 @@ var createBoard =  function(){
 }
 
 var cardsInPlay = [];
+var showResults = document.getElementById('score');
 
 var checkForMatch = function(){
   if (cardsInPlay[0] === cardsInPlay[1]) {
-  console.log("You found a match!");
+    showResults.textContent = "It's a Match!";
   } else {
-    console.log("Sorry, try again.");
+    showResults.textContent = "Sorry! Please try again!";
   }
 }
 var flipCard = function(){
   var cardId = this.getAttribute('data-id');
   this.setAttribute('src', cards[cardId].cardImage);
-  console.log("User flipped " + cards[cardId].rank);
-  console.log(cards[cardId].suit);
+  // console.log("User flipped " + cards[cardId].rank);
+  // console.log(cards[cardId].suit);
   cardsInPlay.push(cards[cardId].rank);
 
   if(cardsInPlay.length === 2){
@@ -56,3 +57,7 @@ var flipCard = function(){
 }
 
 createBoard();
+
+//TODO flip card animation effect
+//randomly arrange cards array. not always load same sequence
+//feedback for the scores

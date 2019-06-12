@@ -59,7 +59,15 @@ img{
 section{
   max-width: 1024px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 40px;
+}
+
+.score-display{
+  font-size: 30px;
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: #f15b31;
 }
 
 footer {
