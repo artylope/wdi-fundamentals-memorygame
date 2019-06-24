@@ -39,7 +39,12 @@ var showResults = document.getElementById('score');
 
 var checkForMatch = function(){
   if (cardsInPlay[0] === cardsInPlay[1]) {
+    cardsInPlay.pop();
+    cardsInPlay.pop();
     showResults.textContent = "It's a Match!";
+    setTimeout(function(){
+      showResults.textContent = "";
+    }, 1000);
   } else {
     showResults.textContent = "Sorry! Please try again!";
   }
